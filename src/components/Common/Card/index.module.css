@@ -1,0 +1,15 @@
+.cardWrapper {
+  @apply card bg-base-100 shadow-xl;
+}
+
+.cardBody {
+  @apply card-body;
+}
+
+.cardTitle {
+  @apply card-title;
+}
+
+.cardActions {
+  @apply card-actions;
+}
