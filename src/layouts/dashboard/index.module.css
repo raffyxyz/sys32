@@ -1,0 +1,11 @@
+.wrapper {
+    @apply flex flex-col min-h-screen;
+
+    .content {
+        @apply flex flex-grow flex-row;
+
+        .main {
+            @apply flex-grow p-6;
+        }
+    }
+}
