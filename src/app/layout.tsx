@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Work_Sans } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Work_Sans({ subsets: ["latin"] });
+const workSans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "OrderUp",
@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-theme="light" lang="en">
-      <body className={inter.className}>{children}</body>
+    <html data-theme="emerald" lang="en">
+      <body className={workSans.className}>{children}</body>
     </html>
   );
 }
