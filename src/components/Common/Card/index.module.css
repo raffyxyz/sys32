@@ -1,15 +1,32 @@
 .cardWrapper {
-  @apply card bg-base-100 shadow-xl;
-}
+  @apply card;
 
-.cardBody {
-  @apply card-body;
-}
+  .cardBody {
+    @apply card-body;
+  }
 
-.cardTitle {
-  @apply card-title;
-}
+  .cardTitle {
+    @apply card-title;
+  }
 
-.cardActions {
-  @apply card-actions;
+  .cardActions {
+    @apply card-actions;
+  }
+
+  &.default {
+    @apply bg-base-100;
+  }
+
+  &.primary {
+    @apply bg-primary text-primary-content;
+  }
+
+  /* Shadow */
+  &.shadowSm {
+    @apply shadow-sm;
+  }
+
+  &.shadowXl {
+    @apply shadow-xl;
+  }
 }

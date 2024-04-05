@@ -1,31 +1,62 @@
-import { FC, ReactNode } from "react";
+import * as React from "react";
+import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/util/class";
 import styles from "./index.module.css";
 
-interface CardProps {
-  children: ReactNode;
-  className?: string;
-}
+const cardVariants = cva(styles.cardWrapper, {
+  variants: {
+    variant: {
+      default: styles["default"],
+      primary: styles["primary"],
+    },
+    shadow: {
+      default: styles["shadowSm"],
+      xl: styles["shadowXl"],
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+    shadow: "default",
+  },
+});
 
-interface CardActionProps extends CardProps {}
-interface CardTitleProps extends CardProps {}
+interface CardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof cardVariants> {}
 
-const Card: FC<CardProps> = ({ children, className }) => {
-  return <div className={cn(styles.cardWrapper, className)}>{children}</div>;
-};
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, variant, shadow, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(cardVariants({ variant, shadow, className }))}
+      {...props}
+    />
+  )
+);
+Card.displayName = "Card";
 
-const CardBody: FC<{ children: ReactNode }> = ({ children }) => {
-  return <div className={cn(styles.cardBody)}>{children}</div>;
-};
+const CardBody = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn(styles.cardBody, className)} {...props} />
+));
+CardBody.displayName = "CardBody";
 
-const CardTitle: FC<CardTitleProps> = ({ children, className }) => {
-  return <h2 className={cn(styles.cardTitle, className)}>{children}</h2>;
-};
+const CardTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h2 ref={ref} className={cn(styles.cardTitle, className)} {...props} />
+));
+CardTitle.displayName = "CardTitle";
 
-const CardActions: FC<CardActionProps> = ({ children, className }) => {
-  return <div className={cn(styles.cardActions, className)}>{children}</div>;
-};
-
-// TODO: This component still need improvements
+const CardActions = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn(styles.cardActions, className)} {...props} />
+));
+CardActions.displayName = "CardActions";
 
 export { Card, CardBody, CardTitle, CardActions };
