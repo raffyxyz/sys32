@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { BarChartBig, Gauge, Settings, Rows2, UsersRound } from "lucide-react";
 import { SideBar } from "../../components/Common/Sidebar";
+import { Header } from "@/components/Common/Header";
 import styles from "./index.module.css";
 
 interface DashboardLayoutProps {
@@ -18,6 +19,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <div className={styles.wrapper}>
+      <Header />
       <div className={styles.content}>
         <SideBar sidebar={sidebar} />
 
