@@ -1,11 +1,11 @@
 .wrapper {
-    @apply flex flex-col min-h-screen;
+  @apply flex flex-col min-h-screen;
 
-    .content {
-        @apply flex flex-grow flex-row;
+  .content {
+    @apply flex flex-grow flex-row;
 
-        .main {
-            @apply flex-grow p-6;
-        }
+    .main {
+      @apply flex-grow px-6 py-2;
     }
+  }
 }
