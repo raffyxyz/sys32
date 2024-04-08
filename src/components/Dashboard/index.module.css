@@ -1,0 +1,23 @@
+.wrapper {
+  @apply mt-10 grid grid-cols-1 xl:grid-cols-3 gap-4;
+}
+
+.refresherBox {
+  @apply flex flex-col space-y-4;
+}
+
+.refresherCard {
+  @apply border;
+
+  .refresherCardWrapper {
+    @apply flex items-center space-x-6;
+
+    .refresherCardIcon {
+      @apply w-14 h-14 rounded-full bg-primary/20 flex justify-center items-center;
+    }
+
+    .refresherCardSubTitle {
+      @apply text-2xl font-semibold;
+    }
+  }
+}
