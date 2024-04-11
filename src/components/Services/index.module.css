@@ -45,3 +45,7 @@
     @apply table table-xs;
   }
 }
+
+.queueListControl {
+  @apply flex justify-between items-center mb-4;
+}

@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
-import { SearchIcon } from "../Icons/SearchIcon";
 import { Pagination } from "../Common/Pagination";
 import { QueueListInfo } from "./queue-list-info";
+import { QueueListControl } from "./queue-list-control";
 
 import { queueListDummy, queueHead } from "@/lib/queue-list";
 import { QueueListType } from "@/types/queue-list";
@@ -22,28 +22,16 @@ export const QueueList = () => {
 
   return (
     <React.Fragment>
-      <div className="flex justify-between items-center mb-4">
-        <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search" />
-          <SearchIcon />
-        </label>
-        <div className="flex space-x-3">
-          <select className="select select-ghost w-full max-w-xs">
-            <option disabled selected>
-              Filter by status
-            </option>
-            <option>Ongoing</option>
-            <option>Completed</option>
-            <option>Pending</option>
-          </select>
-        </div>
-      </div>
+      {/* List Controls */}
+      <QueueListControl />
+
       {/* Desktop View */}
       <DesktopQueueList />
 
       {/* Mobile View */}
       <MobileQueueList newQueueHead={newQueueHead} />
 
+      {/* Pagination */}
       <Pagination
         totalPages={totalPages}
         currentPage={currentPage}
