@@ -1,0 +1,47 @@
+.queueBanner {
+  @apply mt-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.bannerCard {
+  @apply border;
+
+  .bannerTitle {
+    @apply flex items-center space-x-2 md:space-x-4 xl:space-x-6;
+
+    .emojiWrapper {
+      @apply flex py-3 md:py-4 px-2 md:px-3 bg-neutral-100 items-center justify-center rounded-md;
+
+      .emoji {
+        @apply text-3xl md:text-4xl;
+      }
+    }
+
+    .textWrapper {
+      @apply flex flex-col;
+
+      .textValue {
+        @apply text-3xl md:text-4xl;
+      }
+    }
+  }
+}
+
+.queueService {
+  @apply mt-6 p-2 py-4 md:p-8 border rounded-xl;
+}
+
+.queueListDesktop {
+  @apply overflow-x-auto hidden md:block;
+
+  .tableDesktop {
+    @apply table;
+  }
+}
+
+.queueListMobile {
+  @apply overflow-x-auto block md:hidden;
+
+  .tableMobile {
+    @apply table table-xs;
+  }
+}
