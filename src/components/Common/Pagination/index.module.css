@@ -1,0 +1,7 @@
+.pagination {
+  @apply mt-8 join flex justify-center;
+}
+
+.paginationBtn {
+  @apply join-item btn btn-md btn-square;
+}
