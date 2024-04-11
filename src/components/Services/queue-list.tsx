@@ -79,7 +79,9 @@ const MobileQueueList: React.FC<{ newQueueHead: Array<string> }> = ({
         <thead>
           <tr>
             {newQueueHead.map((head: string) => (
-              <th key={head}>{head}</th>
+              <th key={head} className={`${head === "Fee" ? "hidden" : ""}`}>
+                {head}
+              </th>
             ))}
           </tr>
         </thead>
@@ -92,7 +94,9 @@ const MobileQueueList: React.FC<{ newQueueHead: Array<string> }> = ({
         <tfoot>
           <tr>
             {newQueueHead.map((head: string) => (
-              <th key={head}>{head}</th>
+              <th key={head} className={`${head === "Fee" ? "hidden" : ""}`}>
+                {head}
+              </th>
             ))}
           </tr>
         </tfoot>

@@ -11,12 +11,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, icon, ...props }, ref) => {
     return (
       <label className={styles.textInput}>
-        <input
-          ref={ref}
-          className={cn(className, "grow")}
-          type="text"
-          {...props}
-        />
+        <input ref={ref} className={cn(className)} type="text" {...props} />
         {icon}
       </label>
     );
