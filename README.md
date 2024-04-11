@@ -1,4 +1,4 @@
-<h1 align="center">OrderUp</h1>
+<h1 align="center">ServiceUp</h1>
 <p align="center">Easily manage task or services you offer like gaming piloting services.</p>
 
 ## Overview
