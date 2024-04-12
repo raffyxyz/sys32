@@ -2,6 +2,22 @@
   @apply mt-2 hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
 }
 
+.queueBannerControl {
+  @apply flex md:hidden justify-between items-center mt-4;
+
+  .queueBannerControlInput {
+    @apply w-14 sm:w-28;
+  }
+
+  .queueBannerControlSelectWrapper {
+    @apply flex space-x-2;
+
+    .queueBannerControlSelect {
+      @apply w-28;
+    }
+  }
+}
+
 .bannerCard {
   @apply border;
 
@@ -49,7 +65,15 @@
 .queueListControl {
   @apply hidden md:flex justify-between items-center mb-4;
 
+  .queueListControlInput {
+    @apply opacity-70;
+  }
+
   .filterWrapper {
     @apply flex space-x-3;
+
+    .filteWrapperSelect {
+      @apply w-full max-w-xs;
+    }
   }
 }

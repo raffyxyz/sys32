@@ -53,8 +53,8 @@ const DesktopQueueList = () => {
           </tr>
         </thead>
         <tbody>
-          {queueListDummy.map((qList: QueueListType) => (
-            <QueueListInfo key={qList.serviceName} queueList={qList} />
+          {queueListDummy.map((qList: QueueListType, index: number) => (
+            <QueueListInfo key={index} queueList={qList} />
           ))}
         </tbody>
         {/* foot */}
@@ -86,8 +86,8 @@ const MobileQueueList: React.FC<{ newQueueHead: Array<string> }> = ({
           </tr>
         </thead>
         <tbody>
-          {queueListDummy.map((qList: QueueListType) => (
-            <QueueListInfo key={qList.serviceName} queueList={qList} isMobile />
+          {queueListDummy.map((qList: QueueListType, index: number) => (
+            <QueueListInfo key={index} queueList={qList} isMobile />
           ))}
         </tbody>
         {/* foot */}

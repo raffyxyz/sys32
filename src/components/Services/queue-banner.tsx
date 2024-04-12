@@ -1,8 +1,8 @@
 import React from "react";
-import { SearchIcon } from "../Icons/SearchIcon";
 import { Input } from "../Common/Input";
 import { Option, Select } from "../Common/Select";
 import { BannerCard } from "./banner-card";
+import { Search } from "lucide-react";
 import styles from "./index.module.css";
 
 export const QueueBanner = () => {
@@ -13,14 +13,14 @@ export const QueueBanner = () => {
         <BannerCard emoji="✅" title="Completed Service" value="140" />
         <BannerCard emoji="🔃" title="Pending Service" value="80" />
       </div>
-      <div className="flex md:hidden justify-between items-center mt-4">
+      <div className={styles.queueBannerControl}>
         <Input
-          className="w-12 sm:w-24"
-          icon={<SearchIcon />}
+          className={styles.queueBannerControlInput}
+          icon={<Search size={13} className="opacity-70" />}
           placeholder="Search"
         />
-        <div className="flex space-x-2">
-          <Select defaultValue="default">
+        <div className={styles.queueBannerSelectWrapper}>
+          <Select className={styles.queueBannerSelect} defaultValue="default">
             <Option disabled value="default">
               Filter
             </Option>

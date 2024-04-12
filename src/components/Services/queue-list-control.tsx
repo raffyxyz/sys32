@@ -1,16 +1,19 @@
 import React from "react";
 import { Input } from "../Common/Input";
 import { Select, Option } from "../Common/Select";
-import { SearchIcon } from "../Icons/SearchIcon";
+import { Search } from "lucide-react";
 
 import styles from "./index.module.css";
 
 export const QueueListControl = () => {
   return (
     <div className={styles.queueListControl}>
-      <Input icon={<SearchIcon />} placeholder="Search" />
+      <Input
+        icon={<Search size={15} className={styles.queueListControlInput} />}
+        placeholder="Search"
+      />
       <div className={styles.filterWrapper}>
-        <Select className="w-full max-w-xs" defaultValue="default">
+        <Select className={styles.filterWrapperSelect} defaultValue="default">
           <Option disabled value="default">
             Filter by status
           </Option>
