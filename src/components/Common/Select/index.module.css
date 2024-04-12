@@ -1,0 +1,3 @@
+.selectStyle {
+  @apply select select-ghost;
+}

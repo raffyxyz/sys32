@@ -1,0 +1,79 @@
+.queueBanner {
+  @apply mt-2 hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.queueBannerControl {
+  @apply flex md:hidden justify-between items-center mt-4;
+
+  .queueBannerControlInput {
+    @apply w-14 sm:w-28;
+  }
+
+  .queueBannerControlSelectWrapper {
+    @apply flex space-x-2;
+
+    .queueBannerControlSelect {
+      @apply w-28;
+    }
+  }
+}
+
+.bannerCard {
+  @apply border;
+
+  .bannerTitle {
+    @apply flex items-center space-x-2 md:space-x-4 xl:space-x-6;
+
+    .emojiWrapper {
+      @apply flex py-3 md:py-4 px-2 md:px-3 bg-neutral-100 items-center justify-center rounded-md;
+
+      .emoji {
+        @apply text-3xl md:text-4xl;
+      }
+    }
+
+    .textWrapper {
+      @apply flex flex-col;
+
+      .textValue {
+        @apply text-3xl md:text-4xl;
+      }
+    }
+  }
+}
+
+.queueService {
+  @apply mt-6 p-2 py-4 md:p-8 border rounded-xl;
+}
+
+.queueListDesktop {
+  @apply overflow-x-auto hidden md:block;
+
+  .tableDesktop {
+    @apply table;
+  }
+}
+
+.queueListMobile {
+  @apply overflow-x-auto block md:hidden;
+
+  .tableMobile {
+    @apply table table-xs;
+  }
+}
+
+.queueListControl {
+  @apply hidden md:flex justify-between items-center mb-4;
+
+  .queueListControlInput {
+    @apply opacity-70;
+  }
+
+  .filterWrapper {
+    @apply flex space-x-3;
+
+    .filteWrapperSelect {
+      @apply w-full max-w-xs;
+    }
+  }
+}

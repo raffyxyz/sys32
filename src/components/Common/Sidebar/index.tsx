@@ -33,8 +33,8 @@ const SideBar: FC<SideBarProps> = ({ sidebar }) => {
               key={items.label}
               className={cn(
                 isActive(pathname, items.url)
-                  ? "bg-base-content"
-                  : "hover:bg-base-300",
+                  ? "bg-primary"
+                  : "hover:bg-primary/30",
                 styles.linkWrapper
               )}
             >

@@ -1,8 +1,8 @@
 .wrapper {
-  @apply w-64 border-r p-4 border-gray-300;
+  @apply hidden md:block w-64 border-r p-4 border-gray-300;
 
   .linkWrapper {
-    @apply w-full p-2 rounded-md mb-2;
+    @apply w-full p-3 rounded-md mb-2;
   }
 }
 
