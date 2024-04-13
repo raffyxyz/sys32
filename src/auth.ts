@@ -18,7 +18,10 @@ export const lucia = new Lucia(mongooseAdapter, {
   getUserAttributes: (attributes) => {
     return {
       // attributes has the type of DatabaseUserAttributes
+      name: attributes.name,
       username: attributes.username,
+      email: attributes.email,
+      type: attributes.type,
     };
   },
 });
@@ -67,5 +70,8 @@ declare module "lucia" {
 }
 
 interface DatabaseUserAttributes {
+  name: string;
   username: string;
+  email: string;
+  type: string;
 }
