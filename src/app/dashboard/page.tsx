@@ -2,10 +2,8 @@ import React from "react";
 import { Card, CardBody, CardTitle } from "@/components/Common/Card";
 import { Dashboard, RefresherBox, RefresherCard } from "@/components/Dashboard";
 import { Gauge, Timer, UserRoundCheck } from "lucide-react";
-import { validateRequest } from "@/auth";
 
 export default async function DashboardPage() {
-  const { user } = await validateRequest();
   return (
     <React.Fragment>
       <Dashboard>
@@ -30,6 +28,7 @@ export default async function DashboardPage() {
           <CardBody>
             <CardTitle>Completed Service</CardTitle>
             <div className="mt-0">
+              a
               <div className="flex justify-center">
                 <div
                   className="radial-progress text-primary"

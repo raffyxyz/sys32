@@ -1,5 +1,9 @@
-import React from "react";
+import ProtectedPage from "../protected-page";
 
 export default function SettingsPage() {
-  return <div>SettingsPage</div>;
+  return (
+    <ProtectedPage allowedUserTypes={["admin", "provider", "client"]}>
+      <div>SettingsPage</div>
+    </ProtectedPage>
+  );
 }

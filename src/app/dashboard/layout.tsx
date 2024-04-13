@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import DashboardLayout from "@/layouts/dashboard/dashboard-layout";
+import SessionWrapper from "../session-wrapper";
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return <DashboardLayout>{children}</DashboardLayout>;
+  return <SessionWrapper>{children}</SessionWrapper>;
 }
