@@ -29,7 +29,7 @@ export async function signup(
       username: formData.get("username"),
       email: formData.get("email"),
       hashed_password: hashedPassword,
-      type: "admin",
+      type: "client",
     });
 
     const session = await lucia.createSession(user._id, {});
@@ -46,7 +46,7 @@ export async function signup(
     };
   }
 
-  return redirect("/signin");
+  return redirect("/dashboard");
 }
 
 export async function login(
@@ -64,8 +64,6 @@ export async function login(
 
   await connectMongo();
   const existingUser = await User.findOne({ username: username });
-
-  console.log(password);
 
   if (typeof password !== "string") {
     return { error: "No password" };
