@@ -71,8 +71,6 @@ export async function login(
     return { error: "No password" };
   }
 
-  console.log(password);
-
   const validPassword = await new Argon2id().verify(
     existingUser.hashed_password,
     password

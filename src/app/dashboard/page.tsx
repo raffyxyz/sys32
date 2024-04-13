@@ -2,8 +2,10 @@ import React from "react";
 import { Card, CardBody, CardTitle } from "@/components/Common/Card";
 import { Dashboard, RefresherBox, RefresherCard } from "@/components/Dashboard";
 import { Gauge, Timer, UserRoundCheck } from "lucide-react";
+import { validateRequest } from "@/auth";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const { user } = await validateRequest();
   return (
     <React.Fragment>
       <Dashboard>
