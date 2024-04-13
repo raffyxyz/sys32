@@ -1,0 +1,15 @@
+.wrapper {
+  @apply flex flex-col min-h-screen;
+
+  .content {
+    @apply flex flex-grow flex-row;
+
+    .main {
+      @apply flex-grow px-6 py-2;
+
+      .header {
+        @apply flex justify-between items-center;
+      }
+    }
+  }
+}
