@@ -27,7 +27,7 @@ export default function DashboardPage() {
         <Card className="border">
           <CardBody>
             <CardTitle>Completed Service</CardTitle>
-            <div className="mt-6">
+            <div className="mt-0">
               <div className="flex justify-center">
                 <div
                   className="radial-progress text-primary"
@@ -41,6 +41,7 @@ export default function DashboardPage() {
                   70%
                 </div>
               </div>
+              {/* <PieChart /> */}
             </div>
           </CardBody>
         </Card>
