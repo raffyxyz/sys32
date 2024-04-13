@@ -2,8 +2,11 @@
 import { ReactNode } from "react";
 import { BarChartBig, Gauge, Settings, Rows2, UsersRound } from "lucide-react";
 import { SideBar } from "../../components/Common/Sidebar";
+import { Button } from "@/components/Common/Button";
 import { Header } from "@/components/Common/Header";
 import styles from "./index.module.css";
+import { LogOut } from "lucide-react";
+import { logout } from "@/actions/auth-actions";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -25,7 +28,18 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <SideBar sidebar={sidebar} />
 
         <main className={styles.main}>
-
+          <div className={styles.header}>
+            <div>
+              <h1>Welcome</h1>
+            </div>
+            <div>
+              <form action={logout}>
+                <Button className="p-0" size="sm">
+                  <LogOut size={18} />
+                </Button>
+              </form>
+            </div>
+          </div>
           {children}
         </main>
       </div>

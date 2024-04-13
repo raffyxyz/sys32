@@ -6,6 +6,10 @@
 
     .main {
       @apply flex-grow px-6 py-2;
+
+      .header {
+        @apply flex justify-between items-center;
+      }
     }
   }
 }
