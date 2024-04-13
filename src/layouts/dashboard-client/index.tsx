@@ -8,16 +8,17 @@ import styles from "../index.module.css";
 import { LogOut } from "lucide-react";
 import { logout } from "@/actions/auth-actions";
 
-interface DashboardLayoutProps {
+interface DashboardProviderProps {
   children: ReactNode;
 }
 
-export default function DashboardLayout({ children }: DashboardLayoutProps) {
+export default function DashboardClient({ children }: DashboardProviderProps) {
   const sidebar = [
     { label: "Dashboard", url: "/dashboard", icon: <Gauge size={18} /> },
-    { label: "Services", url: "/services", icon: <Rows2 size={18} /> },
-    { label: "Clients", url: "/clients", icon: <UsersRound size={18} /> },
-    { label: "Reports", url: "/reports", icon: <BarChartBig size={18} /> },
+    { label: "Orders", url: "/orders", icon: <Rows2 size={18} /> },
+
+    // { label: "Clients", url: "/clients", icon: <UsersRound size={18} /> },
+    // { label: "Reports", url: "/reports", icon: <BarChartBig size={18} /> },
     { label: "Settings", url: "/settings", icon: <Settings size={18} /> },
   ];
 
